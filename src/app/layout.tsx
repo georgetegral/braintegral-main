@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 
 import { Provider } from '@/components/ui/provider';
 import { Layout } from '@/lib/layout';
+import { GeolocationProvider } from '@/components/GeolocationContext';
 
 type RootLayoutProps = {
   children: React.ReactNode;
@@ -34,7 +35,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     <html lang="en" suppressHydrationWarning>
       <body>
         <Provider>
-          <Layout>{children}</Layout>
+          <GeolocationProvider>
+            <Layout>{children}</Layout>
+          </GeolocationProvider>
         </Provider>
       </body>
     </html>

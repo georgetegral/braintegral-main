@@ -30,6 +30,7 @@
   "dependencies": {
     "@chakra-ui/react": "^3.0.1",
     "@emotion/react": "^11.13.3",
+    "@vercel/functions": "^1.5.2",
     "next": "^15.0.1",
     "next-intl": "^3.26.3",
     "next-themes": "^0.3.0",

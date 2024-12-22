@@ -1,14 +1,19 @@
-import { Flex } from '@chakra-ui/react';
+'use client';
+
+import { Flex, Text } from '@chakra-ui/react';
 import { JorgesAvatar } from './components/avatar';
-import { Text } from '@chakra-ui/react';
 import { SocialIcons } from './components/social-icons';
+import { RetoAmorPropio } from './components/reto-amor-propio';
+import { useGeolocation } from '@/components/GeolocationContext';
 
 export const Home = () => {
+  const geoDetails = useGeolocation();
+  console.log(geoDetails);
   return (
     <Flex
       direction="column"
       alignItems="center"
-      minHeight="70vh"
+      minHeight="80vh"
       gap={2}
       mb={8}
       w="full"
@@ -22,6 +27,7 @@ export const Home = () => {
         potencial en la vida
       </Text>
       <SocialIcons />
+      <RetoAmorPropio />
     </Flex>
   );
 };
