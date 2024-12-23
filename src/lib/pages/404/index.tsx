@@ -12,11 +12,11 @@ export const Page404 = () => {
       <Heading size="7xl" textAlign="center">
         404
       </Heading>
-      <Heading size="md" textAlign="center" marginTop={2}>
+      <Heading size="lg" textAlign="center" marginTop={2}>
         Página no encontrada
       </Heading>
       <Box marginTop={6}>
-        <Button asChild size="md">
+        <Button asChild size="lg">
           <ChakraLink href="/">Regresar</ChakraLink>
         </Button>
       </Box>

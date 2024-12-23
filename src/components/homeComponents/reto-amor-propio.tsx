@@ -1,7 +1,7 @@
-import { Text, Box, HStack, Image } from '@chakra-ui/react';
+import { Text, Box, HStack, Image, Link as ChakraLink } from '@chakra-ui/react';
 import { Button } from '@/components/ui/button';
 
-export const RetoAmorPropio = () => {
+export const RetoAmorPropioCard = () => {
   return (
     <Box
       borderWidth="1px"
@@ -36,9 +36,17 @@ export const RetoAmorPropio = () => {
           </HStack>
         </Box>
       </HStack>
-      <Button mt={4} colorScheme="blue" w="full" size="lg" fontWeight="bold">
-        ¡Descarga ahora!
-      </Button>
+      <ChakraLink
+        href="/reto-amor-propio"
+        mt={4}
+        colorScheme="blue"
+        w="full"
+        fontWeight="bold"
+      >
+        <Button colorScheme="blue" w="full" size="lg">
+          ¡Descarga ahora!
+        </Button>
+      </ChakraLink>
     </Box>
   );
 };

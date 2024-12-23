@@ -1,12 +1,12 @@
 'use client';
 
 import { Flex, Text } from '@chakra-ui/react';
-import { JorgesAvatar } from './components/avatar';
-import { SocialIcons } from './components/social-icons';
-import { RetoAmorPropio } from './components/reto-amor-propio';
+import { JorgesAvatar } from '../components/homeComponents/avatar';
+import { SocialIcons } from '../components/homeComponents/social-icons';
+import { RetoAmorPropioCard } from '../components/homeComponents/reto-amor-propio';
 import { useGeolocation } from '@/components/GeolocationContext';
 
-export const Home = () => {
+const Home = () => {
   const geoDetails = useGeolocation();
   console.log(geoDetails);
   return (
@@ -27,7 +27,9 @@ export const Home = () => {
         potencial en la vida
       </Text>
       <SocialIcons />
-      <RetoAmorPropio />
+      <RetoAmorPropioCard />
     </Flex>
   );
 };
+
+export default Home;
