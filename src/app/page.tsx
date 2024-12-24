@@ -4,6 +4,7 @@ import { Flex, Text } from '@chakra-ui/react';
 import { JorgesAvatar } from '../components/homeComponents/avatar';
 import { SocialIcons } from '../components/homeComponents/social-icons';
 import { RetoAmorPropioCard } from '../components/homeComponents/reto-amor-propio';
+import { EtereaCard } from '@/components/homeComponents/eterea';
 import { useGeolocation } from '@/components/GeolocationContext';
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
       </Text>
       <SocialIcons />
       <RetoAmorPropioCard />
+      <EtereaCard />
     </Flex>
   );
 };

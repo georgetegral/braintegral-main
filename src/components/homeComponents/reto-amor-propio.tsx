@@ -5,16 +5,21 @@ export const RetoAmorPropioCard = () => {
   return (
     <Box
       borderWidth="1px"
-      borderRadius="lg"
+      borderRadius="2xl"
       overflow="hidden"
-      maxW="lg"
+      maxW="xl"
       p={4}
       boxShadow="lg"
+      transition="all 0.2s"
+      _hover={{
+        transform: 'scale(1.03)',
+        textDecoration: 'none',
+      }}
     >
       <HStack alignItems="flex-start">
         <Image
           boxSize="80px"
-          borderRadius="md"
+          borderRadius="2xl"
           src="/retoamorpropio/30diasretoscreenshot.png"
           alt="Digital Product"
         />
