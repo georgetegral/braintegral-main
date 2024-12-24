@@ -18,6 +18,9 @@ export async function POST(req: Request) {
     // Get the JSON Data
     const body = await req.json(); // Parse the incoming JSON body
     const { priceId, quantity } = body;
+    console.log(body);
+    console.log(priceId);
+    console.log(process.env.STRIPE_SECRET_KEY_SANDBOX);
 
     // Clean the referer in case of multiple cancels
     const cleanReferer = cleanUrl(req.headers.get('referer') || '');
