@@ -11,7 +11,6 @@ const RetoAmorPropioLanding = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleCheckout = async () => {
-    console.log(process.env.NEXT_PUBLIC_STRIPE_PUB_KEY_SANDBOX);
     setIsLoading(true);
     const stripe = await stripePromise;
     if (!stripe) {
