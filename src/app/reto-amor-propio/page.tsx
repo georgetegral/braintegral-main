@@ -4,15 +4,14 @@ import { Box, Text, Button, Flex, Spinner } from '@chakra-ui/react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useState } from 'react';
 const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_SANDBOX || ''
+  process.env.NEXT_PUBLIC_STRIPE_PUB_KEY_SANDBOX || ''
 );
 
 const RetoAmorPropioLanding = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleCheckout = async () => {
-    console.log(process.env.NEXT_PUBLIC_RETO_AMOR_PROPIO_SANDBOX);
-    console.log(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_SANDBOX);
+    console.log(process.env.NEXT_PUBLIC_STRIPE_PUB_KEY_SANDBOX);
     setIsLoading(true);
     const stripe = await stripePromise;
     if (!stripe) {
@@ -27,7 +26,7 @@ const RetoAmorPropioLanding = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          priceId: process.env.NEXT_PUBLIC_RETO_AMOR_PROPIO_SANDBOX,
+          priceId: 'price_1QZPc9AJMuMq5HsoKQZmgT0H',
           quantity: 1,
         }),
       });
